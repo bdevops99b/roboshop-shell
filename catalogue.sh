@@ -37,3 +37,5 @@ yum install mongodb-org-shell -y
 
 echo -e "\e[36m>>>>>>>>> Load Schema <<<<<<<<\e[0m"
 mongo --host mongod.panda4u.online </app/schema/catalogue.js
+
+#eol
