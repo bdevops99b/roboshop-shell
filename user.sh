@@ -11,6 +11,6 @@ systemctl daemon-reload
 systemctl enable user
 systemctl start user
 
-cp mongo.repo /etc/yum.repos.d/mongo.repo
+cp /root/roboshop-shell/mongo.repo /etc/yum.repos.d/mongo.repo
 yum install mongodb-org-shell -y
 mongo --host mongod.panda4u.online </app/schema/user.js
