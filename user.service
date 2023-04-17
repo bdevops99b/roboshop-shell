@@ -3,7 +3,7 @@ Description = User Service
 [Service]
 User=roboshop
 Environment=MONGO=true
-Environment=REDIS_HOST=redis-dev.rdevopsb72.online
+Environment=REDIS_HOST=redis.panda4u.online
 Environment=MONGO_URL="mongodb://mongod.panda4u.online:27017/users"
 ExecStart=/bin/node /app/server.js
 SyslogIdentifier=user
