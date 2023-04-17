@@ -6,4 +6,3 @@ cd /usr/share/nginx/html
 unzip /tmp/frontend.zip
 systemctl restart nginx
 systemctl enable nginx
-# eof
