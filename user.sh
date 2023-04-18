@@ -1,4 +1,4 @@
-script_path=$(dirname 0)
+script_path=$(dirname /root/roboshop-shell/common.sh)
 source $(script_path)/common.sh
 useradd ${app_user}
 exit
