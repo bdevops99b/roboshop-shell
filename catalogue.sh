@@ -1,7 +1,6 @@
-script=$(realpath "0$")
+script=$(realpath "$0")
 realpath $0
-dirname "$realpath"
-$dirname
+script_name1=$(dirname "$realpath")
 #echo $script
 exit
 
