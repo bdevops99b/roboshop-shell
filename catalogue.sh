@@ -1,6 +1,6 @@
 script=$(realpath "$0")
 realpath $0
-script_path=$(dirname "$realpath")
+script_path=$script(dirname "$realpath")
 exit
 source ${script_path}/common.sh
 #/root/roboshop-shell/catalogue.sh
