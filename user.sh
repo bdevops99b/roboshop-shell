@@ -1,5 +1,5 @@
+script_path=$(dirname $0)
 source common.sh
-dirname $0
 exit
 curl -sL https://rpm.nodesource.com/setup_lts.x | bash
 yum install nodejs -y
