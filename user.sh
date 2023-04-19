@@ -1,6 +1,7 @@
- script=$(realpath "$0")
- script_name=$(dirname $script)
- echo $script_name
+script_path=$(dirname 0)
+source ${script_path}/common.sh
+
+ echo $app_user
 
 exit
 curl -sL https://rpm.nodesource.com/setup_lts.x | bash
