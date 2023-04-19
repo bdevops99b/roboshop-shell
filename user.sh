@@ -1,7 +1,4 @@
-script_path=$(dirname /root/roboshop-shell/common.sh)
-source $(script_path)/common.sh
-useradd ${app_user}
-exit
+source common.sh
 curl -sL https://rpm.nodesource.com/setup_lts.x | bash
 yum install nodejs -y
 useradd ${app_user}

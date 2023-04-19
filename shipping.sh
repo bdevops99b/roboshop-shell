@@ -1,5 +1,6 @@
+source common.sh
 yum install maven -y
-useradd roboshop
+useradd {app_user}
 mkdir /app
 curl -L -o /tmp/shipping.zip https://roboshop-artifacts.s3.amazonaws.com/shipping.zip
 cd /app
