@@ -1,5 +1,5 @@
-realpath = realpath "$0"
-dirname=${realpath}
+ script=$(realpath "$0")
+script_path=$(dirname "$script")
 exit
 curl -sL https://rpm.nodesource.com/setup_lts.x | bash
 yum install nodejs -y
