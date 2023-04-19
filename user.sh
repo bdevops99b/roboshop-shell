@@ -1,8 +1,11 @@
 script_path=$(dirname $0)
-#source ${script_path}/common.sh
 
-#echo $app_user
-echo script_path
+echo $script_path
+
+source ${script_path}/common.sh
+
+echo $app_user
+
 # source ${script_path}/common.sh
 
  # echo $app_user
