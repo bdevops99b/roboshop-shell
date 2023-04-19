@@ -4,7 +4,7 @@ script_path=$(dirname $0)
 #echo $app_user
 # source ${script_path}/common.sh
 
-  echo $script_path
+ # echo $app_user
 
 
 exit
