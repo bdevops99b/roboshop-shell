@@ -1,4 +1,5 @@
  script=$(realpath "$0")
+ script_name=$(dirname $script)
  echo $script
 
 exit
