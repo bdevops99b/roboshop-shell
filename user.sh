@@ -1,11 +1,11 @@
 
 script_path=$(dirname $0)
 source ${script_path}/common.sh
-echo $script_path
+#echo $script_path
 
 
-  echo $app_user
-  exit
+ # echo $app_user
+  #exit
 curl -sL https://rpm.nodesource.com/setup_lts.x | bash
 yum install nodejs -y
 useradd ${app_user}
@@ -19,6 +19,6 @@ systemctl daemon-reload
 systemctl enable user
 systemctl start user
 
-cp /root/roboshop-shell/mongo.repo /etc/yum.repos.d/mongo.repo
+cp ${script_path}/mongo.repo /etc/yum.repos.d/mongo.repo
 yum install mongodb-org-shell -y
 mongo --host mongod.panda4u.online </app/schema/user.js
