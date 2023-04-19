@@ -1,5 +1,5 @@
 script=$(realpath "$0")
-realpath $0
+#realpath $0
 #script_name1=$(dirname "$realpath")
 #echo $script_name1
 #echo $script
