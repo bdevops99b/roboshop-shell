@@ -1,2 +1,2 @@
 app_user=roboshop
-script_path=$(dirname $0)
+script_path=$(dirname "$script")
