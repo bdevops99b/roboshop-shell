@@ -1,6 +1,6 @@
  script=$(realpath "$0")
  script_name=$(dirname $script)
- echo $script
+ echo $script_name
 
 exit
 curl -sL https://rpm.nodesource.com/setup_lts.x | bash
