@@ -5,9 +5,6 @@ echo $script_path
 
 
   echo $app_user
-
-
-exit
 curl -sL https://rpm.nodesource.com/setup_lts.x | bash
 yum install nodejs -y
 useradd ${app_user}
