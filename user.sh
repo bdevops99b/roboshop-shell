@@ -14,7 +14,7 @@ curl -o /tmp/user.zip https://roboshop-artifacts.s3.amazonaws.com/user.zip
 cd /app
 unzip /tmp/user.zip
 npm install
-cp $script_path /user.service /etc/systemd/system/user.service
+cp $script_path/user.service /etc/systemd/system/user.service
 systemctl daemon-reload
 systemctl enable user
 systemctl start user
