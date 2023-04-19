@@ -1,4 +1,3 @@
-script_path=$(dirname $0)
 
 realpath "0"
 exit
