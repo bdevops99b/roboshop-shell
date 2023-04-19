@@ -1,5 +1,7 @@
 script=$(realpath "0$")
 realpath $0
+dirname "$realpath"
+$dirname
 #echo $script
 exit
 
