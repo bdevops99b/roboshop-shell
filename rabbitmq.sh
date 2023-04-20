@@ -2,7 +2,9 @@ script=$(realpath "$0")
 
 echo $script
 script_path=$(dirname "$script")
+test = $(dirname "$script_path")
 echo $script_path
+echo $test
 
 exit
 
