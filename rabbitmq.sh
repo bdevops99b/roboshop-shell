@@ -3,7 +3,7 @@ script=$(realpath "$0")
 echo $script
 script_path=$(dirname "$script")
 
-A1 = (dirname "$script_path")
+A1 = $(dirname "$script_path")
 
 echo
 echo $script_path
