@@ -2,7 +2,7 @@ script=$(realpath "$0")
 script_path=$(dirname "$script")
 source ${script_path}/common.sh
 yum install maven -y
-useradd {app_user}
+useradd ${app_user}
 mkdir /app
 curl -L -o /tmp/shipping.zip https://roboshop-artifacts.s3.amazonaws.com/shipping.zip
 cd /app
