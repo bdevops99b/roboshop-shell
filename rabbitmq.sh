@@ -2,8 +2,8 @@ script=$(realpath "$0")
 
 echo $script
 script_path=$(dirname "$script")
-
-script9 = $(dirname "$script_path")
+a = $(dirname "$script")
+echo $a
 
 echo $script9
 
