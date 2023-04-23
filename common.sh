@@ -2,9 +2,8 @@ app_user=roboshop
 script=$(realpath "$0")
 script_path=$(dirname "$script")
 
-print_head {
+print_head() {
  echo -e "\e[35m>>>>>>>> $1 <<<<<<\e[0m"
-
 }
 func_nodejs()
 {
