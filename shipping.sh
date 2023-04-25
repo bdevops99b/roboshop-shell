@@ -25,5 +25,5 @@ systemctl enable shipping
 systemctl start shipping
 
 yum install mysql -y
-mysql -h mysql.panda4u.online -uroot -p{mysql_root_password}< /app/schema/shipping.sql
+mysql -h mysql.panda4u.online -uroot -p${mysql_root_password}< /app/schema/shipping.sql
 systemctl restart shipping
