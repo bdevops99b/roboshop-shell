@@ -1,7 +1,7 @@
 script=$(realpath "$0")
 script_path=$(dirname "$script")
 source ${script_path}/common.sh
-mysql_root_password=$1
+#mysql_root_password=$1
 echo -e "\e[36m>>>>>>>>> Install maven <<<<<<<<\e[0m"
 yum install maven -y
 echo -e "\e[36m>>>>>>>>> Add application user  <<<<<<<<\e[0m"
@@ -25,5 +25,5 @@ systemctl enable shipping
 systemctl start shipping
 
 yum install mysql -y
-mysql -h mysql.panda4u.online -uroot -p${mysql_root_password}< /app/schema/shipping.sql
+mysql -h mysql.panda4u.online -uroot -pRoboShop@1< /app/schema/shipping.sql
 systemctl restart shipping
