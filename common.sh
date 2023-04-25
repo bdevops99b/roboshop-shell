@@ -13,7 +13,7 @@ func_nodejs(){
   echo -e "\e[36m>>>>>>>>> Create Application Directory <<<<<<<<\e[0m"
   mkdir /app
   echo -e "\e[36m>>>>>>>>> Download App Content <<<<<<<<\e[0m"
-  curl -o /tmp/${component}.zip https://roboshop-artifacts.s3.amazonaws.com/component.zip
+  curl -o /tmp/${component}.zip https://roboshop-artifacts.s3.amazonaws.com/${component}.zip
   cd /app
   echo -e "\e[36m>>>>>>>>> Unzip App Content <<<<<<<<\e[0m"
   unzip /tmp/${component}.zip
