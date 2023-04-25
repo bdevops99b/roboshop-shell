@@ -12,7 +12,7 @@ schema_setup(){
   print_head " Install MongoDB Client "
   yum install mongodb-org-shell -y
   print_head "Load Schema "
-  mongo --host mongod.panda4u.online </app/schema/{component}.js
+  mongo --host mongod.panda4u.online </app/schema/${component}.js
 fi
 }
 func_nodejs(){
