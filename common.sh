@@ -61,6 +61,7 @@ func_app_prereq(){
 
 func_systemd_setup(){
   func_print_head " Setup SystemD service "
+  func_stat_check $?
   func_print_head " Copy ${component} SystemD file "
   cp ${script_path}/${component}.service /etc/systemd/system/${component}.service &>>$log_file
   func_stat_check $?
