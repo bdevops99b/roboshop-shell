@@ -19,13 +19,13 @@ func_stat_check(){
 }
 func_schema_setup(){
   if [ "$schema_setup" == "mongo" ]; then
-  print_head " Copy MongoDB repo "
+  func_print_head " Copy MongoDB repo "
   cp ${script_path}/mongo.repo /etc/yum.repos.d/mongo.repo &>>$log_file
   func_stat_check $?
-  print_head " Install MongoDB Client "
+  func_print_head " Install MongoDB Client "
   yum install mongodb-org-shell -y &>>$log_file
   func_stat_check $?
-  print_head "Load Schema "
+   func_print_head "Load Schema "
   mongo --host mongod.panda4u.online </app/schema/${component}.js &>>$log_file
   func_stat_check $?
 fi
