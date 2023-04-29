@@ -74,7 +74,7 @@ func_java(){
   func_app_prereq
   func_print_head " Download Maven Dependencies  "
   mvn clean package
-  if [ $? -eq 0]; then
+  if [ $? -eq 0 ]; then
       echo -e "\e[32mSuccess\e[0m"
     else
       echo -e "\e[31mFailure\e[0m"
