@@ -42,7 +42,7 @@ fi
 func_app_prereq(){
     func_print_head " Create Application User "
     id ${app_user} &>>/tmp/roboshop.log
-     if[ $? -ne 0 ]; then
+     if [ $? -ne 0 ]; then
          useradd ${app_user} &>>/tmp/roboshop.log
      fi
     func_stat_check $?
