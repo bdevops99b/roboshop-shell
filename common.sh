@@ -5,8 +5,7 @@ script_path=$(dirname "$script")
 print_head() {
   echo -e "\e[35m>>>>>>> $1 <<<<<<<\e[0m"
 }
-func_schema_setup()
-{
+func_schema_setup(){
   if [ "$schema_setup" == "mongo" ]; then
   print_head " Copy MongoDB repo "
   cp ${script_path}/mongo.repo /etc/yum.repos.d/mongo.repo
@@ -24,6 +23,7 @@ fi
    yum install mysql -y
    func_print_head " Load schema "
    mysql -h mysql.panda4u.online -uroot -p${mysql_root_password}< /app/schema/${component}.sql
+fi
 }
 func_app_prereq(){
     func_print_head " Create Application User "
@@ -61,6 +61,7 @@ func_nodejs(){
   func_schema_setup
   func_systemd_setup
 }
+
 func_java(){
 
   func_print_head " Install maven "
