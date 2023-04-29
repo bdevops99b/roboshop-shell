@@ -26,6 +26,5 @@ systemctl start rabbitmq-server &>>$log_file
 func_stat_check $?
 func_print_head "Add application user  "
 rabbitmqctl add_user roboshop ${rabbitmq_appuser_password} &>>$log_file
-func_stat_check $?
 rabbitmqctl set_permissions -p / roboshop ".*" ".*" ".*" &>>$log_file
 func_stat_check $?
