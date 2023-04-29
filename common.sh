@@ -2,7 +2,7 @@ app_user=roboshop
 script=$(realpath "$0")
 script_path=$(dirname "$script")
 # start
-print_head() {
+func_print_head() {
   echo -e "\e[35m>>>>>>> $1 <<<<<<<\e[0m"
 }
 func_schema_setup(){
@@ -70,7 +70,7 @@ func_java(){
   func_app_prereq
   func_print_head " Download Maven Dependencies  "
   mvn clean package
-  mv target/${component}-1.0.jar ${component} .jar
+  mv target/${component}-1.0.jar ${component}.jar
 
   func_schema_setup
   func_systemd_setup
