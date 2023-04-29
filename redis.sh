@@ -1,7 +1,7 @@
 script=$(realpath "$0")
 script_path=$(dirname "$script")
 
-func_print_head " Install Redis Repos  "
+func_print_head " Install Redis Repos "
 yum install https://rpms.remirepo.net/enterprise/remi-release-8.rpm -y  &>>$log_file
 func_stat_check $?
 
