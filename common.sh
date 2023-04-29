@@ -84,7 +84,7 @@ func_nodejs(){
 func_java(){
 
   func_print_head " Install maven "
-  yum install maven -y >/tmp/roboshop.log
+  yum install maven -y &>>/tmp/roboshop.log
   func_stat_check $?
   func_app_prereq
   func_print_head " Download Maven Dependencies  "
