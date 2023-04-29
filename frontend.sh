@@ -1,16 +1,23 @@
 script=$(realpath "$0")
 script_path=$(dirname "$script")
 source ${script_path}/common.sh
-echo -e "\e[36m>>>>>>>>> Install Nginx server <<<<<<<<\e[0m"
-yum install nginx -y
-echo -e "\e[36m>>>>>>>>> Copy roboshop configuration file <<<<<<<<\e[0m"
-cp ${script_path}/roboshop.conf /etc/nginx/default.d/roboshop.conf
-rm -rf /usr/share/nginx/html/*
-echo -e "\e[36m>>>>>>>>> Download App Content <<<<<<<<\e[0m"
-curl -o /tmp/frontend.zip https://roboshop-artifacts.s3.amazonaws.com/frontend.zip
-cd /usr/share/nginx/html
-echo -e "\e[36m>>>>>>>>> Unzip App Content <<<<<<<<\e[0m"
-unzip /tmp/frontend.zip
-echo -e "\e[36m>>>>>>>>> Start nginx Service <<<<<<<<\e[0m"
-systemctl restart nginx
-systemctl enable nginx
+func_print_head " Install Nginx server "
+yum install nginx -y &>>$log_file
+func_systemd_setup
+func_print_head " Copy roboshop configuration file "
+cp ${script_path}/roboshop.conf /etc/nginx/default.d/roboshop.conf &>>$log_file
+func_systemd_setup
+func_print_head " Remove old app content "
+rm -rf /usr/share/nginx/html/* &>>$log_file
+func_systemd_setup
+func_print_head "  Download App Content "
+curl -o /tmp/frontend.zip https://roboshop-artifacts.s3.amazonaws.com/frontend.zip &>>$log_file
+func_systemd_setup
+cd /usr/share/nginx/html &>>$log_file
+func_print_head " Unzip App Content "
+unzip /tmp/frontend.zip &>>$log_file
+func_systemd_setup
+func_print_head " Start nginx Service "
+systemctl restart nginx &>>$log_file
+systemctl enable nginx &>>$log_file
+func_systemd_setup
