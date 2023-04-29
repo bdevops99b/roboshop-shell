@@ -105,3 +105,17 @@ func_java(){
   func_systemd_setup
 
   }
+func_python(){
+
+  func_print_head " Install Python "
+  yum install python36 gcc python3-devel -y
+  func_stat_check $?
+  func_app_prereq
+  func_print_head " Install Python Dependencies "
+  pip3.6 install -r requirements.txt
+  func_stat_check $?
+  func_print_head " Update passwords in systemd file "
+  sed -i -e "s|rabbitmq_appuser_password|${rabbitmq_appuser_password}|" ${script_path}/payment.service
+ func_stat_check $?
+ func_systemd_setup
+}
