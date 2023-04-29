@@ -44,7 +44,7 @@ func_app_prereq(){
     id ${app_user} &>>/tmp/roboshop.log
      if[ $? -ne 0 ]; then
          useradd ${app_user} &>>/tmp/roboshop.log
-     if
+     fi
     func_stat_check $?
     func_print_head " Create Application Directory "
     rm -rf /app &>>$log_file
