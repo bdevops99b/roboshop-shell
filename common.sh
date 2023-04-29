@@ -5,7 +5,8 @@ script_path=$(dirname "$script")
 print_head() {
   echo -e "\e[35m>>>>>>> $1 <<<<<<<\e[0m"
 }
-func_schema_setup(){
+func_schema_setup()
+{
   if [ "$schema_setup" == "mongo" ]; then
   print_head " Copy MongoDB repo "
   cp ${script_path}/mongo.repo /etc/yum.repos.d/mongo.repo
