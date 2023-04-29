@@ -5,7 +5,7 @@ func_print_head " Install Nginx server "
 yum install nginx -y &>>$log_file
 func_systemd_setup
 func_print_head " Copy roboshop configuration file "
-cp roboshop.conf /etc/nginx/default.d/roboshop.conf
+cp roboshop.conf /etc/nginx/default.d/roboshop.conf &>>$log_file
 func_systemd_setup
 func_print_head " Remove old app content "
 rm -rf /usr/share/nginx/html/* &>>$log_file
