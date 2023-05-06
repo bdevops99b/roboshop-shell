@@ -4,7 +4,7 @@ source ${script_path}/common.sh
 mysql_root_password=$1
 if [ -z "$mysql_root_password" ]; then
   echo Input mysql root password missing
- exit
+ exit 1
 fi
 func_print_head " our application needs MySQL 5.7. So lets disable MySQL 8 version"
 dnf module disable mysql -y &>>$log_file
