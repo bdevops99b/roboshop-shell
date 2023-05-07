@@ -5,7 +5,7 @@ rabbitmq_appuser_password=$1
 #samp
 if [ -z "$rabbitmq_appuser_password" ]; then
   echo Input roboshop user password missing
- exit 1
+ exit
 fi
 
 func_print_head " Download App Content - setup erland repos"
