@@ -10,7 +10,7 @@ func_stat_check $?
 func_print_head "Substituting ip"
 sed -i -e 's|127.0.0.1|0.0.0.0|' /etc/mongod.conf &>>$log_file
 func_stat_check $?
-func_print_head "Start Cart Service"
+func_print_head "Start mongodb Services"
 systemctl enable mongod &>>$log_file
 systemctl restart mongod &>>$log_file
 func_stat_check $?
